@@ -43,7 +43,23 @@ body, html{
     cursor: pointer;
 }
 
+.control-button:hover {
+    background-color: #ffffff;
+    color: #000000;
+    transition: 0.3s;
+    transform: scale(1.1);
+}
+
 
 .screen {
     background-color: #000000;
+    color: #ffffff;
+    font-size: 48px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
 }
