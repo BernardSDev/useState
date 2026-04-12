@@ -22,7 +22,7 @@ body, html{
 }
 
 .control {
-    background-color: #FEB74D;
+    background-color: #ffffff;
     padding: 40px;
 
     display: flex;
@@ -33,11 +33,13 @@ body, html{
     gap: 20px;
 }
 
+.control > * {
+    color: #dd6464;
+}
+
 .control-button {
-    background-color: #000000;
-    color: #ffffff;
-    font-size: 18px;
-    padding: 10px 20px;
+    font-size: 22px;
+    padding: 20px 45px;
     border-radius: 5px;
     border: none;
     cursor: pointer;
@@ -52,8 +54,6 @@ body, html{
 
 
 .screen {
-    background-color: #000000;
-    color: #ffffff;
     font-size: 48px;
 
     display: flex;

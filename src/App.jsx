@@ -19,12 +19,19 @@ function App() {
                 </p>
                 <button
                     onClick = { handleSwitch }
+                    style={{ backgroundColor: isLightOn ? "#22c55e" : "#B47753", color: "white" }}
                     className="control-button"
                 >
                     { isLightOn ? "Switch off" : "Switch on" }
                 </button>
             </div>
-            <div className="screen">
+            <div
+                className="screen"
+                style={{
+                    background: isLightOn ? "#fff7c2" : "#111827",
+                    color: isLightOn ? "#1f2937" : "#f9fafb",
+                }}
+            >
                 { isLightOn ? <h1>Light is On</h1> : <h1>Light is Off</h1> }
             </div>
         </div>
