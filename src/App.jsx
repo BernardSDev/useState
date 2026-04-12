@@ -21,7 +21,7 @@ function App() {
                     onClick = { handleSwitch }
                     className="control-button"
                 >
-                    Switch on
+                    { isLightOn ? "Switch off" : "Switch on" }
                 </button>
             </div>
             <div className="screen">
