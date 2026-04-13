@@ -1,10 +1,15 @@
 import {useState} from "react";
+import LightBulb from "./components/Lightbulb.jsx";
 
 function App() {
     const [isLightOn, setIsLightOn] = useState(false);
+    const [hasToggled, setHasToggled] = useState(false);
+    const [animKey, setAnimKey] = useState(0);
 
     function handleSwitch() {
-        setIsLightOn(!isLightOn);
+        setHasToggled(true);
+        setIsLightOn(prev => !prev);
+        setAnimKey(prev => prev + 1);
     }
 
     return (
@@ -26,13 +31,11 @@ function App() {
                 </button>
             </div>
             <div
-                className="screen"
-                style={{
-                    background: isLightOn ? "#fff7c2" : "#111827",
-                    color: isLightOn ? "#1f2937" : "#f9fafb",
-                }}
+                key={animKey}
+                className={`screen ${isLightOn ? "light-on" : hasToggled ? "light-off" : "light-idle"}`}
+                style={{ color: isLightOn ? "#1f2937" : "#f9fafb" }}
             >
-                { isLightOn ? <h1>Light is On</h1> : <h1>Light is Off</h1> }
+                <LightBulb isOn={isLightOn} />
             </div>
         </div>
     )
